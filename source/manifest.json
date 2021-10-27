@@ -1,0 +1,29 @@
+{
+  "manifest_version": 2,
+  "name": "Lorem Ipsum Context Menu",
+  "version": "0.1.0",
+  "description": "Simple Lorem Ipsum generator for inserting directly from the context menu",
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  },
+  "background": {
+    "page": "background.html"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "all_frames": true
+    }
+  ],
+  "permissions": [
+    "tabs",
+    "contextMenus"
+  ]
+}
